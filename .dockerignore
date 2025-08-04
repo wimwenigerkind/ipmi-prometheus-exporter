@@ -1,0 +1,22 @@
+# Binaries
+ipmi-exporter
+*.exe
+
+# IDE files
+.idea/
+.vscode/
+
+# Test files
+test_data.txt
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+README.md
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore

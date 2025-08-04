@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 30s
+  evaluation_interval: 30s
+
+scrape_configs:
+  - job_name: 'ipmi-exporter'
+    static_configs:
+      - targets: ['ipmi-exporter:8080']
+    scrape_interval: 30s
+    metrics_path: /metrics
