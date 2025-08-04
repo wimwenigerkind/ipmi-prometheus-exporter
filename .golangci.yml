@@ -1,0 +1,56 @@
+run:
+  timeout: 5m
+  go: '1.21'
+
+linters-settings:
+  govet:
+    check-shadowing: true
+  gocyclo:
+    min-complexity: 15
+  goconst:
+    min-len: 2
+    min-occurrences: 2
+  misspell:
+    locale: US
+  lll:
+    line-length: 140
+  gosec:
+    excludes:
+      - G204 # Subprocess launched with variable - needed for ipmitool
+      - G104 # Errors unhandled - some are intentional
+
+linters:
+  enable:
+    - bodyclose
+    - deadcode
+    - depguard
+    - dogsled
+    - errcheck
+    - goconst
+    - gocyclo
+    - gofmt
+    - goimports
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - lll
+    - misspell
+    - nakedret
+    - staticcheck
+    - structcheck
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - varcheck
+    - whitespace
+
+  disable:
+    - maligned
+
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - gosec

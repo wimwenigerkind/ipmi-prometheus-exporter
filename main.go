@@ -15,6 +15,12 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
+var (
+	version = "dev"
+	commit  = "none"
+	date    = "unknown"
+)
+
 type IPMIConfig struct {
 	Host     string
 	Username string
